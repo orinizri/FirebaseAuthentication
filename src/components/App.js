@@ -6,7 +6,7 @@ import Dashboard from "./dashboard";
 import Login from "./login";
 import PrivateRoute from "./privateRoute";
 import ForgotPassword from "./forgotpassword";
-import Profile from "./profile";
+import Profile from "./Profile/profile";
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
               <Route path='/signup' element={<Signup />} />
               <Route path='/login' element={<Login />} />
               <Route path='/forgot-password' element={<ForgotPassword />} />
+              <Route path='/profile' element={<Profile />} />
             </Routes>
         </BrowserRouter>
       </Container>

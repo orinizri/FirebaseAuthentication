@@ -5,8 +5,7 @@ import { useRef } from 'react';
 import { useAuth } from './context/authContext';
 import { Link, useNavigate } from 'react-router-dom';
 
-
-
+    
 export default function ForgotPassword() {
     let navigate = useNavigate();
     const emailRef = useRef();
@@ -35,6 +34,7 @@ export default function ForgotPassword() {
         <Card.Body>
             <h2 className="text-center mb-4">Password Reset</h2>
             {message && <Alert varient="success">{message}</Alert>}
+            {error && <Alert varient="danger">{error}</Alert>}
             
             <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -52,4 +52,5 @@ export default function ForgotPassword() {
         </div>
     </Card>
         </>
+    )
 }
